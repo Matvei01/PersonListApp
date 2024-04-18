@@ -13,6 +13,7 @@
 		1A1CEB3D2BD17850004E273D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A1CEB3C2BD17850004E273D /* Assets.xcassets */; };
 		1A1CEB402BD17850004E273D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A1CEB3E2BD17850004E273D /* LaunchScreen.storyboard */; };
 		1A1CEB4D2BD17F3C004E273D /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1CEB4C2BD17F3C004E273D /* Person.swift */; };
+		1A1CEB502BD18627004E273D /* PersonViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1CEB4F2BD18627004E273D /* PersonViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		1A1CEB3F2BD17850004E273D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1A1CEB412BD17850004E273D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A1CEB4C2BD17F3C004E273D /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		1A1CEB4F2BD18627004E273D /* PersonViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,23 +58,24 @@
 		1A1CEB322BD1784E004E273D /* PersonListApp */ = {
 			isa = PBXGroup;
 			children = (
-				1A1CEB4B2BD17F27004E273D /* Models */,
+				1A1CEB4E2BD185EE004E273D /* Views */,
 				1A1CEB482BD17984004E273D /* Controllers */,
+				1A1CEB4B2BD17F27004E273D /* Models */,
 				1A1CEB4A2BD17A08004E273D /* LaunchScreen */,
 				1A1CEB492BD179F7004E273D /* Resources */,
-				1A1CEB472BD17976004E273D /* Info */,
+				1A1CEB472BD17976004E273D /* App */,
 			);
 			path = PersonListApp;
 			sourceTree = "<group>";
 		};
-		1A1CEB472BD17976004E273D /* Info */ = {
+		1A1CEB472BD17976004E273D /* App */ = {
 			isa = PBXGroup;
 			children = (
 				1A1CEB332BD1784E004E273D /* AppDelegate.swift */,
 				1A1CEB352BD1784E004E273D /* SceneDelegate.swift */,
 				1A1CEB412BD17850004E273D /* Info.plist */,
 			);
-			path = Info;
+			path = App;
 			sourceTree = "<group>";
 		};
 		1A1CEB482BD17984004E273D /* Controllers */ = {
@@ -105,6 +108,14 @@
 				1A1CEB4C2BD17F3C004E273D /* Person.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		1A1CEB4E2BD185EE004E273D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1A1CEB4F2BD18627004E273D /* PersonViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,6 +189,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A1CEB382BD1784E004E273D /* PersonListViewController.swift in Sources */,
+				1A1CEB502BD18627004E273D /* PersonViewCell.swift in Sources */,
 				1A1CEB342BD1784E004E273D /* AppDelegate.swift in Sources */,
 				1A1CEB4D2BD17F3C004E273D /* Person.swift in Sources */,
 				1A1CEB362BD1784E004E273D /* SceneDelegate.swift in Sources */,
@@ -326,7 +338,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = QZ329TNU43;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = PersonListApp/Info.plist;
+				INFOPLIST_FILE = PersonListApp/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -357,7 +369,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = QZ329TNU43;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = PersonListApp/Info.plist;
+				INFOPLIST_FILE = PersonListApp/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
