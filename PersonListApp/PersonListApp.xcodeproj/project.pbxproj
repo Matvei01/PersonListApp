@@ -12,6 +12,7 @@
 		1A1CEB382BD1784E004E273D /* PersonListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1CEB372BD1784E004E273D /* PersonListViewController.swift */; };
 		1A1CEB3D2BD17850004E273D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A1CEB3C2BD17850004E273D /* Assets.xcassets */; };
 		1A1CEB402BD17850004E273D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A1CEB3E2BD17850004E273D /* LaunchScreen.storyboard */; };
+		1A1CEB4D2BD17F3C004E273D /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1CEB4C2BD17F3C004E273D /* Person.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		1A1CEB3C2BD17850004E273D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A1CEB3F2BD17850004E273D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1A1CEB412BD17850004E273D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A1CEB4C2BD17F3C004E273D /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		1A1CEB322BD1784E004E273D /* PersonListApp */ = {
 			isa = PBXGroup;
 			children = (
+				1A1CEB4B2BD17F27004E273D /* Models */,
 				1A1CEB482BD17984004E273D /* Controllers */,
 				1A1CEB4A2BD17A08004E273D /* LaunchScreen */,
 				1A1CEB492BD179F7004E273D /* Resources */,
@@ -94,6 +97,14 @@
 				1A1CEB3E2BD17850004E273D /* LaunchScreen.storyboard */,
 			);
 			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
+		1A1CEB4B2BD17F27004E273D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1A1CEB4C2BD17F3C004E273D /* Person.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,6 +179,7 @@
 			files = (
 				1A1CEB382BD1784E004E273D /* PersonListViewController.swift in Sources */,
 				1A1CEB342BD1784E004E273D /* AppDelegate.swift in Sources */,
+				1A1CEB4D2BD17F3C004E273D /* Person.swift in Sources */,
 				1A1CEB362BD1784E004E273D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
