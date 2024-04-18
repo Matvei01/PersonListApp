@@ -13,12 +13,15 @@ final class PersonListViewController: UIViewController {
     // MARK: - Private Properties
     let cellID = "personCell"
     
+    let persons = Person.getPersons()
+    
     // MARK: - UI Elements
     private lazy var personsTableView: UITableView = {
         let tableView = UITableView()
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellID)
+        tableView.register(PersonViewCell.self, forCellReuseIdentifier: cellID)
+        tableView.separatorStyle = .none
         tableView.dataSource = self
-        tableView.delegate = self
+        tableView.translatesAutoresizingMaskIntoConstraints = false
         
         return tableView
     }()
@@ -33,43 +36,50 @@ final class PersonListViewController: UIViewController {
 // MARK: - UITableViewDataSource
 extension PersonListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        0
+        persons.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath) as? PersonViewCell else {
+            return UITableViewCell()
+        }
+        
+        let person = persons[indexPath.row]
+        
+        cell.configure(person: person)
+        cell.selectionStyle = .none
         
         return cell
     }
 }
 
-// MARK: - UITableViewDelegate
-extension PersonListViewController: UITableViewDelegate {
-    
-}
-
 // MARK: - Private methods
 private extension PersonListViewController {
     func setupView() {
-        addSubviews()
-        setConstraints()
-    }
-    
-    func addSubviews() {
+        view.backgroundColor = .white
+        view.addSubview(personsTableView)
         
-    }
-    
-    func setupSubviews(_ subviews: UIView... ) {
-        for subview in subviews {
-            view.addSubview(subview)
-        }
+        setConstraints()
     }
 }
 
 // MARK: - Constraints
 private extension PersonListViewController {
     func setConstraints() {
-        
+        NSLayoutConstraint.activate([
+            personsTableView.topAnchor.constraint(
+                equalTo: view.safeAreaLayoutGuide.topAnchor
+            ),
+            personsTableView.leadingAnchor.constraint(
+                equalTo: view.safeAreaLayoutGuide.leadingAnchor
+            ),
+            personsTableView.trailingAnchor.constraint(
+                equalTo: view.safeAreaLayoutGuide.trailingAnchor
+            ),
+            personsTableView.bottomAnchor.constraint(
+                equalTo: view.safeAreaLayoutGuide.bottomAnchor
+            )
+        ])
     }
 }
 
